@@ -1,6 +1,6 @@
 <h1>Wines for Sale</h1>
 <ol>
 <% @wines.each do |wine| %>
-  <li><%= wine.name %></li>
+  <li><%= wine.name %> is a <%= wine.varietal %> from <%= wine.winery %></li>
 <% end %>
 </ol>
