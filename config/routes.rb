@@ -55,5 +55,5 @@ Rails.application.routes.draw do
   #   end
 
 get "/wines" => "wines#index", as: 'wines'
-
+get "/wines/:id" => "wines#show", as: 'wine'
 end
