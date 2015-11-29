@@ -54,11 +54,12 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-get "/wines" => "wines#index", as: 'wines'
-get "/wines/new" => "wines#new", as: 'new_wine'
-get "/wines/:id" => "wines#show", as: 'wine'
-post "/wines" => "wines#create"
-get "/wines/:id/edit" => "wines#edit", as: 'edit_wine'
-patch "/wines/:id" => "wines#update"
+#get "/wines" => "wines#index", as: 'wines'
+#get "/wines/new" => "wines#new", as: 'new_wine'
+#get "/wines/:id" => "wines#show", as: 'wine'
+#post "/wines" => "wines#create"
+#get "/wines/:id/edit" => "wines#edit", as: 'edit_wine'
+#patch "/wines/:id" => "wines#update"
 
+resources:wines
 end
