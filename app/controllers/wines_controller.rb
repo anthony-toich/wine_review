@@ -12,9 +12,16 @@ def new
 end
 
 def create
-  @wine = Wine.new(wine_params)
-  @wine.save
-  redirect_to @wine
+  #@wine = Wine.new(wine_params)
+  #@wine.save
+  #redirect_to @wine
+
+@wine = Wine.new(wine_params)
+if @wine.save
+  redirect_to @wine, notice: "#{@wine.name} was created!"
+else
+  render :new
+end
 end
 
 def edit
@@ -23,8 +30,15 @@ end
 
 def update
   @wine = Wine.find(params[:id])
-  @wine.update(wine_params)
-  redirect_to @wine
+  #@wine.update(wine_params)
+  #redirect_to @wine
+
+if @wine.update(wine_params)
+  redirect_to @wine, notice: "#{@wine.name} was updated!"
+else
+  render :edit
+end
+
 end
 
 private
