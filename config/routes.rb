@@ -61,6 +61,8 @@ Rails.application.routes.draw do
 #get "/wines/:id/edit" => "wines#edit", as: 'edit_wine'
 #patch "/wines/:id" => "wines#update"
 
-resources:wines
+resources :wines do
+  get 'page/:page', :action => :index, :on => :collection
+end
 root 'wines#index'
 end
