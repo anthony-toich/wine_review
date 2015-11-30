@@ -62,4 +62,5 @@ Rails.application.routes.draw do
 #patch "/wines/:id" => "wines#update"
 
 resources:wines
+root 'wines#index'
 end
