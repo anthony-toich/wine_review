@@ -5,4 +5,10 @@ class Wine < ActiveRecord::Base
   validates :varietal,
     :inclusion => { :in => VARIETALS,
     :message => "%{value} is not a valid varietal."}
+    has_many :logentries, dependent: :destroy
+
+def average_rating
+  logentries.average(:rating)
+end
+
 end

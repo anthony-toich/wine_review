@@ -8,6 +8,13 @@
 <p><label>Winery:</label> <%= @wine.winery %></p>
 <p><label>Country:</label> <%= @wine.country %></p>
 <p><label>Varietal:</label> <%= @wine.varietal %></p>
+
+<p>
+  Read all
+  <%= link_to pluralize(@wine.logentries.size, 'Entry'), wine_logentries_path(@wine) %>
+  <p><label>Average Rating:</label> <%= format_average_rating(@wine) %></p>
+</p>
+
 </article>
 
 <%= link_to 'All Wines', wines_path %> | <%= link_to 'Edit', edit_wine_path(@wine) %>
