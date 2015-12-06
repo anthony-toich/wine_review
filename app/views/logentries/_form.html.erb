@@ -1,14 +1,28 @@
 <%= form_for( [ @wine, @logentry ] ) do |f| %>
   <%= render 'shared/validation_errors', object: @logentry %>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, autofocus: true, placeholder: 'Name' %><br />
-  <%= f.label :rating %>
+  <div class="formLabel"><%= f.label :name %></div>
+  <div class="formField"><%= f.text_field :name, autofocus: true, placeholder: 'Name' %></div>
+  <div class="clearAll"></div>
+ <div class="formLabel"> <%= f.label :ratings %></div>
+   <div class="formField">
   <% Logentry::RATINGS.each do |rating| %>
-    <%= f.radio_button :rating, rating %> <%= rating %>
-  <% end %><br />
-  <%= f.label :comments %><br/>
-  <%= f.text_area :comments %><br/>
+    <%= f.radio_button :ratings, 'rating' %> <%= rating %>
+  <% end %></div>
+   <div class="clearAll"></div>
+  <div class="formLabel"><%= f.label :comments %></div>
+   <div class="formField"><%= f.text_area :comments %></div>
+   <div class="clearAll"></div>
+  <div class="formLabel"><%= f.label :location %>  </div>
+     <div class="formField"><%= f.text_area :location %></div>
+   <div class="clearAll"></div>
+
+<div class="formLabel"><%= f.label :tasted_on %>  </div>
+
+<div class="formField">
+<%= f.text_field :tasted_on %>
+</div>
+ <div class="clearAll"></div>
   <p>
     <%= f.submit %>
     <%= link_to 'Cancel', wine_logentries_path(@wine), id: 'cancel_logentry' %>

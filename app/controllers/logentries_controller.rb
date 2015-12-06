@@ -26,7 +26,7 @@ def set_wine
 end
 
 def logentry_params
-  params.require(:logentry).permit(:rating, :location, :comments, :tasted_on)
+  params.require(:logentry).permit(:name, :ratings, :location, :comments, :tasted_on)
 end
 
 

@@ -8,7 +8,7 @@ class Wine < ActiveRecord::Base
     has_many :logentries, dependent: :destroy
 
 def average_rating
-  logentries.average(:rating)
+  logentries.average(:ratings)
 end
 
 end

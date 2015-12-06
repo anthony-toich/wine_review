@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20151204010554) do
   create_table "logentries", force: :cascade do |t|
     t.string   "name"
     t.string   "string"
-    t.string   "rating"
+    t.integer   "ratings"
     t.string   "integer"
     t.string   "location"
     t.string   "comments"

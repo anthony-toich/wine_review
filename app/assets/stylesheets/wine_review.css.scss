@@ -6,3 +6,18 @@ body{
   font-size: 1.5em;
   background: linear-gradient(white, silver);
 }
+div.formLabel{
+  width: 5em;
+  text-align: right;
+  float: left;
+}
+div.formField{
+  width: 20em;
+  text-align: left;
+  float: left;
+}
+div.clearAll{
+  float:none;
+  clear: both;
+  height: 1em;
+}
