@@ -6,9 +6,9 @@
   <div class="clearAll"></div>
  <div class="formLabel"> <%= f.label :ratings %></div>
    <div class="formField">
-  <% Logentry::RATINGS.each do |rating| %>
-    <%= f.radio_button :ratings, 'rating' %> <%= rating %>
-  <% end %></div>
+  <% Logentry::RATINGS.each do |ratings| %>
+    <%= f.radio_button :rating, ratings %> <%= ratings %>
+  <% end %> </div>
    <div class="clearAll"></div>
   <div class="formLabel"><%= f.label :comments %></div>
    <div class="formField"><%= f.text_area :comments %></div>
@@ -20,7 +20,7 @@
 <div class="formLabel"><%= f.label :tasted_on %>  </div>
 
 <div class="formField">
-<%= f.text_field :tasted_on %>
+<%= f.date_select :tasted_on %>
 </div>
  <div class="clearAll"></div>
   <p>

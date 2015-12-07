@@ -15,13 +15,10 @@ ActiveRecord::Schema.define(version: 20151204010554) do
 
   create_table "logentries", force: :cascade do |t|
     t.string   "name"
-    t.string   "string"
-    t.integer   "ratings"
-    t.string   "integer"
+    t.integer  "rating"
     t.string   "location"
     t.string   "comments"
-    t.string   "tasted_on"
-    t.string   "datetime"
+    t.datetime "tasted_on"
     t.integer  "wine_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

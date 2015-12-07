@@ -11,7 +11,7 @@
 
 <p>
   Read all
-  <%= link_to pluralize(@wine.logentries.size, 'Entry'), wine_logentries_path(@wine) %>
+  <%= link_to pluralize(@wine.logentries.size, 'entry'), wine_logentries_path(@wine) %>
   <p><label>Average Rating:</label> <%= format_average_rating(@wine) %></p>
 </p>
 
